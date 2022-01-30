@@ -26,7 +26,14 @@ const path = require('path');
 // });
 
 // Read File    
-fs.readFile(path.join(__dirname, '/test', 'hello.txt'),'utf8', (err, data) => {
+// fs.readFile(path.join(__dirname, '/test', 'hello.txt'),'utf8', (err, data) => {
+//     if(err) throw err;
+//     console.log(data);
+// });
+
+
+// File Rename
+fs.rename(path.join(__dirname, '/test', 'hello.txt'),path.join(__dirname, '/test', 'index.txt'), err => {
     if(err) throw err;
-    console.log(data);
+    console.log("File Rename....");
 });
